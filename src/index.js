@@ -1,4 +1,5 @@
 const express = require("express")
+const cors = require("cors")
 const mongoose = require("mongoose")
 const app = express()
 require("dotenv").config()
@@ -7,6 +8,12 @@ const sucursalRoutes = require("./routes/sucursal")
 const productoRoutes = require("./routes/producto")
 
 const port = process.env.PORT || 5000
+
+app.use(cors({
+  origin: 'http://localhost:4200',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
 
 
 app.use(express.json())
