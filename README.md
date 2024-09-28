@@ -1,19 +1,20 @@
-# Paso 1
+# Aplicación Cliente-Servidor para crear Franquicias, Sucursales y Productos en Mongo DB Atlas
 
-Ejecutar "git switch develop" (main tiene todo)
+Prueba practica cliente-servidor, que permite crear franquicias, sucursales asociadas a franquicias, productos asociados a sucursales, stock por producto en sucursal.
 
-# Paso 2
+Cuenta con todas las validaciones para evitar duplicados, crear alguna sucurcusal o producto si si existe en la tabla padre, entre otras valdaciones y respuesta para experiencia del cliente.
 
-Ejecutar "npm i"
+# Instrucciones para ejecutar
 
-# Paso 3
+1. Requisitos
 
-Ejecutar "npm run serve"
+- Node JS v18.20.2
 
-# Paso 4
+2. Ejecución
 
-Extraer Collection.json e importalo en Postman
-
-# Paso 5
-
-Realizar pruebas desde Postman
+- Clonar proyecto <git clone url_git>
+- Ubicarse en la rama "develop" <git switch develop> desde el bash
+- Instalar dependencias <npm i>
+- Extraer Collection.json e importarlo en Postman
+- Ejecutar <npm run serve>
+- Realizar pruebas desde Postman
