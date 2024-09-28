@@ -138,4 +138,20 @@ router.put(`${path}/update-stock`, (req, res) => {
     }));
 });
 
+// Consultar todos los productos
+router.get(`${path}/consultar`, (req, res) => {
+  productoSchema
+    .find()
+    .then((productos) => {
+      return res.status(200).json({
+        message: 'Productos consutlados exitosamente.',
+        producto: productos,
+      });
+    })
+    .catch((error) => res.status(500).json({
+      error: 'Error al consultar productos.',
+      details: error.message,
+    }));
+});
+
 module.exports = router;
