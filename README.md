@@ -1,11 +1,19 @@
 # Paso 1
 
-Desde git bash ejecutar "git switch develop" (main se hizo merge)
+Ejecutar "git switch develop" (main tiene todo)
 
 # Paso 2
 
-Ejecutar "npm run serve"
+Ejecutar "npm i"
 
 # Paso 3
 
-Realizar pruebas con la colección Postman adjuntada
+Ejecutar "npm run serve"
+
+# Paso 4
+
+Extraer Collection.json e importalo en Postman
+
+# Paso 5
+
+Realizar pruebas desde Postman
