@@ -2,7 +2,7 @@ const mongoose = require("mongoose")
 
 const sucursalSchema = mongoose.Schema({
   nitFranquicia: {
-    type: String,
+    type: Number,
     required: true
   },
   nameSucursal: {
