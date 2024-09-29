@@ -6,10 +6,14 @@ const path = "/franquicia"
 
 // Agregar nueva franquicia
 router.post(`${path}/create`, (req, res) => {
-  const { nitFranquicia, nameSucursal } = req.body;
+  const { nitFranquicia, nameFranquicia } = req.body;
 
-  franquiciaSchema.findOne({ $or: [{ nitFranquicia }, { nameSucursal }] })
+  franquiciaSchema.findOne({ $or: [{ nitFranquicia }, { nameFranquicia }] })
     .then((existingFranquicia) => {
+      console.log(req.body);
+
+      console.log(existingFranquicia);
+
       if (existingFranquicia) {
         return res.status(400).json({
           error: 'Ya existe una franquicia con ese NIT o nombre.',
